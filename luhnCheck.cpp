@@ -28,11 +28,13 @@ void luhnCheck()
 	std::string inputStr = std::to_string(inputVal);
 	cout << "Value = " << inputStr <<"\n";
 
-	size_t n_elements = inputStr.length();
-	size_t digits = n_elements;
-	size_t iterator = 0;
-	int sum = 0;
-	int buffer;
+	auto n_elements = inputStr.length();
+	auto digits = n_elements;
+	
+	// this is new way of initializing variables to 0
+	int iterator{};
+	int sum{};
+	int buffer{};
 
 	// knowing the length we can determine where the digit doublers are
 	if ((n_elements % 2) == 0)
